@@ -1,0 +1,15 @@
+services:
+  api-a:
+    image: aula-api-a:1.0
+    networks:
+      - rede-apis
+
+  api-b:
+    image: aula-api-b:1.0
+    networks:
+      - rede-apis
+
+networks: 
+  rede-apis: 
+    driver: bridge
+    internal: true
